@@ -24,33 +24,23 @@ function MainTabs() {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: colors.surfaceLight,
-          borderTopWidth: 0,
-          elevation: 10,
-          shadowColor: colors.shadow,
-          shadowOffset: { width: 0, height: -3 },
-          shadowOpacity: 0.15,
-          shadowRadius: 8,
-          height: 80,
-          paddingBottom: 20,
+          borderTopWidth: 1,
+          borderTopColor: 'rgba(0,0,0,0.1)',
+          height: 60,
+          paddingBottom: 10,
           paddingTop: 8,
-          position: 'absolute',
-          bottom: 25,
-          left: 25,
-          right: 25,
-          borderRadius: 25,
-          backdropFilter: 'blur(10px)',
         },
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.inactive,
         tabBarLabelStyle: {
           fontSize: 12,
           fontWeight: '500',
-          paddingBottom: 5,
         },
         headerStyle: {
           backgroundColor: colors.surfaceLight,
-          elevation: 0,
-          shadowOpacity: 0,
+          elevation: 1,
+          shadowOpacity: 0.1,
+          shadowOffset: { width: 0, height: 1 },
         },
         headerTitleStyle: {
           fontWeight: 'bold',
@@ -64,8 +54,9 @@ function MainTabs() {
         options={{
           title: 'Maçlar',
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="sports-soccer" size={size} color={color} />
+            <MaterialIcons name="sports-soccer" size={24} color={color} />
           ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
@@ -74,7 +65,7 @@ function MainTabs() {
         options={{
           title: 'Maç Oluştur',
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="add-circle" size={28} color={color} />
+            <MaterialIcons name="add-circle" size={24} color={color} />
           ),
         }}
       />
@@ -84,7 +75,7 @@ function MainTabs() {
         options={{
           title: 'Harita',
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="map" size={size} color={color} />
+            <MaterialIcons name="map" size={24} color={color} />
           ),
         }}
       />
@@ -94,7 +85,7 @@ function MainTabs() {
         options={{
           title: 'Profil',
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="person" size={size} color={color} />
+            <MaterialIcons name="person" size={24} color={color} />
           ),
         }}
       />
